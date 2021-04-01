@@ -1,0 +1,120 @@
+
+@keyframes color-change-stroke {
+    0% { stroke: #3caede; }
+    50% { stroke: #fff; }
+    100% { stroke: #3caede; }
+}
+
+@keyframes color-change-fill {
+    0% { fill: #3caede; }
+    50% { fill: #fff; }
+    100% { fill: #3caede; }
+}
+
+.site-footer {
+	width: 100%;
+	float: left;
+	background: #000;
+	padding-top: 60px;
+	p, a {
+		color: #38738c;
+	}
+	li {
+		max-width: 330px;
+		line-height: 22px;
+		margin-bottom: 10px;
+		a {
+			color: #696969;
+			text-decoration: none;
+			font-size: 16px;
+			transition: all 0.3s ease-in-out;
+			font-weight: 500;
+			&:hover {
+				color: #3caede;
+			}
+		}
+	}
+	.footer-bottom {
+		width: 100%;
+		float: left;
+		background: #000;
+		padding: 20px 0;
+    	border-top: 1px solid #1f1f1f;
+		p {
+			display: inline-block;
+			color: #38738c;
+			color: #696969;
+			font-weight: 700;
+			text-transform: uppercase;
+			font-size: 14px;
+			margin-bottom: 0;
+		}
+	}
+	.footer-col {
+		padding: 0 50px;
+		min-width: 330px;
+		&:last-of-type {
+			padding-right: 0;
+		}
+		h4 {
+			color: #969696;
+			text-transform: uppercase;
+		}
+		svg {
+			display: block;
+			width: 240px;
+			polyline, path, line {
+				-webkit-animation: color-change-stroke 2s infinite;
+				-moz-animation: color-change 2s infinite;
+				-o-animation: color-change 2s infinite;
+				-ms-animation: color-change 2s infinite;
+				animation: color-change-stroke 2s infinite;
+			}
+			polygon {
+				-webkit-animation: color-change-fill 2s infinite;
+				-moz-animation: color-change 2s infinite;
+				-o-animation: color-change 2s infinite;
+				-ms-animation: color-change 2s infinite;
+				animation: color-change-fill 2s infinite;
+			}
+		}
+	}
+	.site-info {
+		display: flex;
+		display: flex;
+		/* align-items: center; */
+		justify-content: center;
+		margin-bottom: 40px;
+	}
+	@media all and (max-width: 1100px){
+		.site-info {
+			justify-content: left;
+		}
+		.footer-col {
+			padding: 0 20px;
+			min-width: 0;
+			margin-right: 40px;
+			&:first-of-type {
+				margin-right: 0;
+			}
+			svg {
+			    display: block;
+			    width: 150px;
+			}
+		}
+	}
+	@media all and (max-width: 844px){
+		.site-info {
+			display: block;
+			margin-bottom: 0;
+		}
+		.footer-col {
+			// width: 40%;
+			float: left;
+			margin-bottom: 40px;
+			&:last-of-type {
+				width: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,127 @@
+@import "homepage-t";
+
+// 
+
+/**** Isotope Filtering ****/
+
+.isotope-item {
+  z-index: 2;
+}
+
+.isotope-hidden.isotope-item {
+  pointer-events: none;
+  z-index: 1;
+}
+
+/**** Isotope CSS3 transitions ****/
+
+.isotope,
+.isotope .isotope-item {
+  -webkit-transition-duration: 0.8s;
+     -moz-transition-duration: 0.8s;
+      -ms-transition-duration: 0.8s;
+       -o-transition-duration: 0.8s;
+          transition-duration: 0.8s;
+}
+
+.isotope {
+  -webkit-transition-property: height;
+     -moz-transition-property: height;
+      -ms-transition-property: height;
+       -o-transition-property: height;
+          transition-property: height;
+}
+
+.isotope .isotope-item {
+  -webkit-transition-property: -webkit-transform, opacity;
+     -moz-transition-property:    -moz-transform, opacity;
+      -ms-transition-property:     -ms-transform, opacity;
+       -o-transition-property:      -o-transform, opacity;
+          transition-property:         transform, opacity;
+}
+
+/**** disabling Isotope CSS3 transitions ****/
+
+.isotope.no-transition,
+.isotope.no-transition .isotope-item,
+.isotope .isotope-item.no-transition {
+  -webkit-transition-duration: 0s;
+     -moz-transition-duration: 0s;
+      -ms-transition-duration: 0s;
+       -o-transition-duration: 0s;
+          transition-duration: 0s;
+}
+
+.single-project {
+    h1  {
+        margin-bottom: 1em;
+    }
+}
+
+.type-project  {
+    .txt-wrap,
+    .img-content {
+        float: left;
+    }
+    .txt-wrap {
+        width: 35%;
+        padding-right: 40px;
+    }
+    .img-content {
+        width: 65%;
+        
+        position: relative;
+    }
+    .swiper-container {
+        width: 100%;
+    }
+    @media all and (max-width: 1200px){
+        .txt-wrap {
+            width: 45%;
+        }
+        .img-content {
+            width: 55%;
+        }
+    }
+    @media all and (max-width: 780px){
+        .txt-wrap {
+            width: 100%;
+            padding-right: 0;
+        }
+        .img-content {
+            width: 100%;
+        }
+    }
+}
+
+
+.post-nav {
+    text-align: center;
+    .nav-previous,
+    .nav-next {
+        display: inline-block;
+        margin: 0 15px 15px;
+    }
+    .nav-previous {
+        text-align: right;
+    }
+    .nav-next {
+       text-align: left;
+    }
+    span {
+        display: block;
+
+    }
+}
+.logo-wrap {
+    li {
+        width: 50%;
+        float: left;
+        margin-bottom: 0;
+        padding: 12px;
+    }
+    img {
+        display: block;
+        width: 100%;
+    }
+}
